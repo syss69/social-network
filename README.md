@@ -1,2 +1,2 @@
 # social-network
-solo project durung my studies
+solo project during my studies
