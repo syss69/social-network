@@ -35,40 +35,40 @@
         <a href="myProfile.html"
           ><div>
             <img src="icons/profile.svg" alt="my profile" />
-            <h3>My profile</h3>
+            <h3 class="label">My profile</h3>
           </div>
         </a>
         <a href="mainPage.html"
           ><div>
             <img src="icons/news.svg" alt="news page" />
-            <h3>News page</h3>
+            <h3 class="label">News page</h3>
           </div></a
         >
         <a href="chats.html"
           ><div>
             <img src="icons/chat.svg" alt="chats" />
-            <h3>Chats</h3>
+            <h3 class="label">Chats</h3>
           </div></a
         >
 
         <a href="friends.html"
           ><div>
             <img src="icons/friends.svg" />
-            <h3>Friends</h3>
+            <h3 class="label">Friends</h3>
           </div></a
         >
 
         <a href="servers.html"
           ><div>
             <img src="icons/servers.svg" />
-            <h3>Servers</h3>
+            <h3 class="label">Servers</h3>
           </div></a
         >
 
         <a href="settings.html"
           ><div>
             <img src="icons/settings.svg" />
-            <h3>Settings</h3>
+            <h3 class="label">Settings</h3>
           </div></a
         >
       </nav>
@@ -84,16 +84,42 @@
             <h2>Hardware</h2>
           </div>
           <div>
-            <p>Audio input</p>
-            <label for="input-select">Choose an input qudio device:</label>
+            <h3>Audio input</h3>
+            <label for="input-select">Choose an input audio device:</label>
             <select name="input" id="input-select">
               <option value="">--Please choose an option--</option>
               <option value="razer kraken x">Razer kraken x</option>
             </select>
           </div>
           <div>
-            <p>Audio output</p>
+            <h3>Audio output</h3>
+            <label for="input-select">Choose an output audio device:</label>
+            <select name="output" id="output-select">
+              <option value="">--Please choose an option--</option>
+              <option value="razer kraken x">Razer kraken x</option>
+              <option value="razer kraken x">25G3ZM</option>
+            </select>
           </div>
+        </div>
+        <div class="privacy-settings">
+          <div>
+            <h2>Privacy</h2>
+          </div>
+          <div>
+            <h3>Messages</h3>
+            <label for="input-select">Who can send me messages:</label>
+            <select name="input" id="input-select">
+              <option value="all">All users</option>
+              <option value="razer kraken x">Just friends</option>
+            </select>
+          </div>
+        </div>
+        <div class="buttons">
+          <div>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+          </div>
+          <button type="disabled">Log out</button>
         </div>
       </section>
     </main>

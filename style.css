@@ -113,7 +113,7 @@ header {
   background-color: #d9d9d9;
   color: #000059;
   border-radius: 1rem;
-  width: 35vh;
+  width: 25vw;
   height: 4vh;
 }
 
@@ -216,6 +216,15 @@ main {
   width: 95%;
 }
 
+@media (max-width: 600px){
+  .label{
+    display: none;
+  }
+  nav{
+    padding-left: 10%;
+  }
+}
+
 /* post */
 
 .post {
@@ -243,6 +252,11 @@ main {
   display: flex;
   justify-content: space-between;
   border: black 2px;
+}
+
+.image-box img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 /* 
@@ -310,7 +324,9 @@ profile
 
 .profile-menu div {
   display: flex;
+  align-items: center;
 }
+
 
 .new-post {
   position: relative;
@@ -344,7 +360,7 @@ profile
 
 .filter img {
   height: 100%;
-  min-height: 50px;
+  min-height: 20px;
 }
 
 .list-element {
@@ -370,4 +386,105 @@ profile
   height: 100%;
   font-size: 1.8rem;
   flex-grow: 1;
+}
+
+@media (max-width: 600px){
+ .element-name{
+  font-size: 1rem;
+ }
+
+ .element-picture{
+  height: 60%;
+ }
+
+ .element-options{
+  height: 60%;
+ }
+
+ .element-options img{
+  height: 50%;
+ }
+
+ .element-notification{
+  height: 60%;
+ }
+
+ .element-notification img{
+  height: 50%;
+ }
+}
+
+/* settings */
+
+.hardware-settings{
+  display: flex;
+  flex-direction: column;
+}
+
+.hardware-settings h2 {
+  text-align: center;
+}
+
+.privacy-settings{
+  display: flex;
+  flex-direction: column;
+}
+
+.privacy-settings h2{
+  text-align: center;
+}
+
+.buttons{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10%;
+}
+
+button[type="submit"] {
+  background-color: #0000bf;
+  color: white;
+  border-radius: 15px;
+}
+
+button[type="reset"] {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+/* login */
+
+.login{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10%;
+  gap: 10%;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35%;
+}
+
+.links{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10%;
+  width: 60%;
+}
+
+input{
+  border-radius: 15px;
+  width: 200%;
+
+}
+
+.checkbox-label {
+  display: flex;
+  gap: 5px;
+  font-size: 0.9em;
+  text-align: left;
 }
