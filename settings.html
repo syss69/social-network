@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="style.css" />
+    <link href="style-bootstrap.css" rel="stylesheet" />
     <title>Vybe</title>
   </head>
   <body>
@@ -17,9 +18,24 @@
       <div class="logo">
         <img class="logoIcon" src="icons/site logo.svg" alt="site logo" />
       </div>
-      <div class="search">
-        <input class="searchBar" type="text" placeholder="Rechercher..." />
-        <img class="searchIcon" src="icons/search.svg" alt="search icon" />
+      <div class="searchbar1">
+        <div class="input-group mb-3 border">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Looking for something?"
+            aria-label="serach"
+            aria-describedby="basic-addon2"
+          />
+          <div class="input-group-append">
+            <button
+              class="btn btn-outline-secondary btn-sm d-flex align-items-center border"
+              type="button"
+            >
+              <img src="icons/search.svg" style="height: 45px" />
+            </button>
+          </div>
+        </div>
       </div>
       <div class="rightIcons">
         <img
@@ -85,20 +101,35 @@
           </div>
           <div>
             <h3>Audio input</h3>
-            <label for="input-select">Choose an input audio device:</label>
-            <select name="input" id="input-select">
-              <option value="">--Please choose an option--</option>
-              <option value="razer kraken x">Razer kraken x</option>
-            </select>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01"
+                  >Please select your input device</label
+                >
+              </div>
+              <select class="custom-select" id="inputGroupSelect01">
+                <option selected>Choose...</option>
+                <option value="1">Microphone</option>
+                <option value="2">Headphones microphone</option>
+                <option value="3">Default device</option>
+              </select>
+            </div>
           </div>
           <div>
             <h3>Audio output</h3>
-            <label for="input-select">Choose an output audio device:</label>
-            <select name="output" id="output-select">
-              <option value="">--Please choose an option--</option>
-              <option value="razer kraken x">Razer kraken x</option>
-              <option value="razer kraken x">25G3ZM</option>
-            </select>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01"
+                  >Please select your output device</label
+                >
+              </div>
+              <select class="custom-select" id="inputGroupSelect01">
+                <option selected>Choose...</option>
+                <option value="1">Headphones</option>
+                <option value="2">Monitor</option>
+                <option value="3">Defailt device</option>
+              </select>
+            </div>
           </div>
         </div>
         <div class="privacy-settings">
@@ -107,21 +138,39 @@
           </div>
           <div>
             <h3>Messages</h3>
-            <label for="input-select">Who can send me messages:</label>
-            <select name="input" id="input-select">
-              <option value="all">All users</option>
-              <option value="razer kraken x">Just friends</option>
-            </select>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01"
+                  >Who can send me messages?</label
+                >
+              </div>
+              <select class="custom-select" id="inputGroupSelect01">
+                <option selected>Choose...</option>
+                <option value="1">All users</option>
+                <option value="2">Friends of my friends</option>
+                <option value="3">My friends</option>
+              </select>
+            </div>
           </div>
         </div>
         <div class="buttons">
           <div>
-            <button type="submit">Submit</button>
-            <button type="reset">Reset</button>
+            <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+            <button class="btn btn-secondary btn-lg" type="reset">Reset</button>
           </div>
-          <button type="disabled">Log out</button>
+          <button class="btn btn-outline-light btn-sm">Log out</button>
         </div>
       </section>
     </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
