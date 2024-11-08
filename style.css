@@ -558,3 +558,18 @@ button[type="reset"] {
     width: 100%;
   }
 }
+
+/*Messages*/
+
+.input-message{
+  position: fixed;
+  bottom: 1%;
+  width: 60%;
+  left: 20%;
+  height: 4vh;
+}
+
+.message{
+  display: flex;
+  flex-direction: column;
+}
