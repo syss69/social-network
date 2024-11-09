@@ -571,5 +571,35 @@ button[type="reset"] {
 
 .message{
   display: flex;
-  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  border: solid;
+  margin-bottom: 1%;
+}
+
+
+.message-image{
+  width: 10%;
+}
+
+.message-image img{
+  width: 100%;
+}
+
+.message-content{
+  width: 85%;
+}
+
+.message-age{
+  align-items: start;
+  height: 100%;
+}
+
+@media (max-width: 600px) {
+  .message{
+    font-size: small;
+  }
+  #message-image{
+    display: none;
+  }
 }
