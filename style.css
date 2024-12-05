@@ -509,6 +509,13 @@ button[type="reset"] {
   flex-wrap: wrap;
 }
 
+.connection form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .connection-input {
   display: flex;
   flex-direction: column;
@@ -532,8 +539,12 @@ button[type="reset"] {
 .links {
   width: 60%;
   display: flex;
-  justify-content: space-between;
+  text-align: center;
   margin: 1rem;
+}
+
+.links a {
+  width: 100%;
 }
 
 .connection button {
