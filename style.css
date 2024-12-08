@@ -423,6 +423,8 @@ profile
   flex-grow: 1;
 }
 
+
+
 @media (max-width: 600px) {
   .element-name {
     font-size: 1rem;
