@@ -23,6 +23,9 @@ const createListElement = (user) => {
     elementName.classList.add("element-name");
     const link = document.createElement("a");
     link.href = "messages.html" ;
+    link.addEventListener("click", ()=> {
+        localStorage.setItem("selectedUser", user.name)
+    })
     elementName.appendChild(link);
     const userName = document.createElement("h1");
     userName.textContent = user.name;
