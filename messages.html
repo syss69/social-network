@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link href="style-bootstrap.css" rel="stylesheet" />
+    <title>Vybe</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img class="logoIcon" src="icons/site logo.svg" alt="site logo" />
+      </div>
+      <div class="searchbar1">
+        <div class="input-group mb-3 border">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Looking for something?"
+            aria-label="serach"
+            aria-describedby="basic-addon2"
+          />
+          <div class="input-group-append">
+            <button
+              class="btn btn-outline-secondary btn-sm d-flex align-items-center border"
+              type="button"
+            >
+              <img src="icons/search.svg" style="height: 5%" />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="rightIcons">
+        <img
+          src="icons/notification.svg"
+          alt="notifications"
+          class="notifIcon"
+        />
+        <img src="icons/account-online.svg" alt="account" class="accountIcon" />
+      </div>
+    </header>
+    <section class="leftBar">
+      <nav>
+        <a href="myProfile.html"
+          ><div>
+            <img src="icons/profile.svg" alt="my profile" />
+            <h3 class="label">My profile</h3>
+          </div>
+        </a>
+        <a href="mainPage.html"
+          ><div>
+            <img src="icons/news.svg" alt="news page" />
+            <h3 class="label">News page</h3>
+          </div></a
+        >
+        <a href="chats.html"
+          ><div>
+            <img src="icons/chat.svg" alt="chats" />
+            <h3 class="label">Chats</h3>
+          </div></a
+        >
+
+        <a href="friends.html"
+          ><div>
+            <img src="icons/friends.svg" />
+            <h3 class="label">Friends</h3>
+          </div></a
+        >
+
+        <a href="servers.html"
+          ><div>
+            <img src="icons/servers.svg" />
+            <h3 class="label">Servers</h3>
+          </div></a
+        >
+
+        <a href="settings.html"
+          ><div>
+            <img src="icons/settings.svg" />
+            <h3 class="label">Settings</h3>
+          </div></a
+        >
+      </nav>
+    </section>
+    <section class="rightBar"></section>
+    
+    <main>
+      <section class="page-header">
+        <h2>Chat/User Name</h2>
+      </section>
+      <section class="page-content" id="messages-chat"
+      style="margin-bottom: 4vh;">
+      <div class="message">
+        <div class="message-image" id="message-image">
+          <img src="icons/account-online.svg">
+        </div>
+        <div class="message-content">
+          <div class="message-name">
+            <h3>
+              You
+            </h3>
+          </div>
+          <div class="message-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed lobortis libero. In rhoncus venenatis auctor.In rhoncus venenatis auctor.
+          </div>
+        </div>
+        <div class="message-age">
+          10 min
+        </div>
+      </div>
+      <div class="message">
+        <div class="message-image" id="message-image">
+          <img src="icons/account-online.svg">
+        </div>
+        <div class="message-content">
+          <div class="message-name">
+            <h3>
+              User Name
+            </h3>
+          </div>
+          <div class="message-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed lobortis libero. In rhoncus venenatis auctor.In rhoncus venenatis auctor.
+          </div>
+        </div>
+        <div class="message-age">
+          9 min
+        </div>
+      </div>
+      <div class="message">
+        <div class="message-image" id="message-image">
+          <img src="icons/account-online.svg">
+        </div>
+        <div class="message-content">
+          <div class="message-name">
+            <h3>
+              You
+            </h3>
+          </div>
+          <div class="message-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed lobortis libero. In rhoncus venenatis auctor.In rhoncus venenatis auctor.
+          </div>
+        </div>
+        <div class="message-age">
+          8 min
+        </div>
+      </div>
+    </section>
+      <section class="input-message">
+            <div class="searchbar1">
+                <div class="input-group mb-3 border">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Write your message here"
+                    aria-label="serach"
+                    aria-describedby="basic-addon2"
+                    id="input-message"
+                  />
+                  <div class="input-group-append">
+                    <button
+                      class="btn btn-outline-secondary btn-sm d-flex align-items-center border"
+                      type="button"
+                    >
+                      <img src="icons/clip.svg" style="height: 4vh" />
+                    </button>
+                    <button
+                      class="btn btn-outline-secondary btn-sm d-flex align-items-center border"
+                      type="button"
+                      id="button-send-message"
+                    >
+                      <img src="icons/send-blue.svg" style="height: 4vh" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+        </section>
+    </main>
+    <script src="js/messageScript.js"></script>
+  </body>
+</html>
+
+<!--
+
+-->

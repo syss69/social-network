@@ -18,9 +18,24 @@
       <div class="logo">
         <img class="logoIcon" src="icons/site logo.svg" alt="site logo" />
       </div>
-      <div class="search">
-        <input class="searchBar" type="text" placeholder="Rechercher..." />
-        <img class="searchIcon" src="icons/search.svg" alt="search icon" />
+      <div class="searchbar1">
+        <div class="input-group mb-3 border">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Looking for something?"
+            aria-label="serach"
+            aria-describedby="basic-addon2"
+          />
+          <div class="input-group-append">
+            <button
+              class="btn btn-outline-secondary btn-sm d-flex align-items-center border"
+              type="button"
+            >
+              <img src="icons/search.svg" style="height: 5%" />
+            </button>
+          </div>
+        </div>
       </div>
       <div class="rightIcons">
         <img
@@ -79,84 +94,104 @@
       <section class="page-header">
         <h2>News page</h2>
       </section>
-      <section class="page-content">
+      <section class="page-content" id="page-content">
         <div class="new-post">
-          <input placeholder="Something new?" />
-          <img src="icons/clip.svg" />
-          <img src="icons/send-blue.svg" />
-        </div>
-        <div class="post">
-          <div class="post-header">
-            <div class="user-info">
-              <img src="icons/account-online.svg" />
-              <h2>Account Name</h2>
+          <input placeholder="Something new?" type="text" id="new-post-input"/>
+          <button
+                          class="btn btn-outline-secondary btn-sm d-flex align-items-center border"
+                          type="button"
+                        >
+                          <img src="icons/clip.svg" style="height: 3vh" />
+                        </button>
+          <button
+                      class="btn btn-outline-secondary btn-sm d-flex align-items-center border"
+                      type="button"
+                      id="create-post-button"
+                    >
+                      <img src="icons/send-blue.svg" style="height: 3vh" />
+                    </button>
+        </div> 
+        <div class="page-posts" id="page-posts">
+          <div class="post">
+            <div class="post-header">
+              <div class="user-info">
+                <img src="icons/account-online.svg" />
+                <h2>Account Name</h2>
+              </div>
+              <h4>1h ago</h4>
             </div>
-            <h4>1h ago</h4>
-          </div>
-          <div class="post-content">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Vestibulum vestibulum vestibulum ipsum ac lacinia. Quisque
-              malesuada quam lectus, a finibus tortor semper non.
-            </p>
-            <div class="image-box">
-              <img src="https://picsum.photos/400" />
-              <img src="https://picsum.photos/400" />
+            <div class="post-content">
+              <div class="post-content-text">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Vestibulum vestibulum vestibulum ipsum ac lacinia. Quisque
+                  malesuada quam lectus, a finibus tortor semper non.
+                </p>
+              </div>
+              <div class="image-box">
+                <img src="https://picsum.photos/400" />
+                <img src="https://picsum.photos/400" />
+              </div>
             </div>
-          </div>
-          <div class="post-footer">
-            <img src="icons/heart-gray.svg" />
-            <img src="icons/comment.svg" />
-            <img src="icons/send-gray.svg" />
-          </div>
-        </div>
-        <div class="post">
-          <div class="post-header">
-            <div class="user-info">
-              <img src="icons/account-online.svg" />
-              <h2>Account Name</h2>
-            </div>
-            <h4>1h ago</h4>
-          </div>
-          <div class="post-content">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Vestibulum vestibulum vestibulum ipsum ac lacinia. Quisque
-              malesuada quam lectus, a finibus tortor semper non.
-            </p>
-            <div class="image-box">
-              <img src="https://picsum.photos/400" />
+            <div class="post-footer">
+              <img src="icons/heart-gray.svg" />
+              <img src="icons/comment.svg" />
+              <img src="icons/send-gray.svg" />
             </div>
           </div>
-          <div class="post-footer">
-            <img src="icons/heart-gray.svg" />
-            <img src="icons/comment.svg" />
-            <img src="icons/send-gray.svg" />
-          </div>
-        </div>
-        <div class="post">
-          <div class="post-header">
-            <div class="user-info">
-              <img src="icons/account-online.svg" />
-              <h2>Account Name</h2>
+          <div class="post">
+            <div class="post-header">
+              <div class="user-info">
+                <img src="icons/account-online.svg" />
+                <h2>Account Name</h2>
+              </div>
+              <h4>1h ago</h4>
             </div>
-            <h4>1h ago</h4>
+            <div class="post-content">
+              <div class="post-content-text">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Vestibulum vestibulum vestibulum ipsum ac lacinia. Quisque
+                  malesuada quam lectus, a finibus tortor semper non.
+                </p>
+              </div>
+              <div class="image-box">
+                <img src="https://picsum.photos/400" />
+              </div>
+            </div>
+            <div class="post-footer">
+              <img src="icons/heart-gray.svg" />
+              <img src="icons/comment.svg" />
+              <img src="icons/send-gray.svg" />
+            </div>
           </div>
-          <div class="post-content">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Vestibulum vestibulum vestibulum ipsum ac lacinia. Quisque
-              malesuada quam lectus, a finibus tortor semper non.
-            </p>
-            <div class="image-box"></div>
-          </div>
-          <div class="post-footer">
-            <img src="icons/heart-gray.svg" />
-            <img src="icons/comment.svg" />
-            <img src="icons/send-gray.svg" />
+          <div class="post">
+            <div class="post-header">
+              <div class="user-info">
+                <img src="icons/account-online.svg" />
+                <h2>Account Name</h2>
+              </div>
+              <h4>1h ago</h4>
+            </div>
+            <div class="post-content">
+              <div class="post-content-text">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Vestibulum vestibulum vestibulum ipsum ac lacinia. Quisque
+                  malesuada quam lectus, a finibus tortor semper non.
+                </p>
+              </div>
+              <div class="image-box"></div>
+            </div>
+            <div class="post-footer">
+              <img src="icons/heart-gray.svg" />
+              <img src="icons/comment.svg" />
+              <img src="icons/send-gray.svg" />
+            </div>
           </div>
         </div>
       </section>
     </main>
+    <script src="js/postScript.js"></script>
   </body>
 </html>
