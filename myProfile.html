@@ -135,9 +135,22 @@
           </div>
         </div>
         <div class="new-post">
-          <input placeholder="Something new?" />
-          <img src="icons/clip.svg" />
-          <img src="icons/send-blue.svg" />
+          <input placeholder="Something new?" type="text" id="new-post-input" />
+          <div class="input-group-append">
+            <button
+              class="btn btn-outline-secondary btn-sm d-flex align-items-center border"
+              type="button"
+            >
+              <img src="icons/clip.svg" style="height: 3vh" />
+            </button>
+            <button
+              class="btn btn-outline-secondary btn-sm d-flex align-items-center border"
+              type="button"
+              id="create-post-button"
+            >
+              <img src="icons/send-blue.svg" style="height: 3vh" />
+            </button>
+          </div>
         </div>
         <div class="post">
           <div class="post-header">

@@ -90,96 +90,111 @@
       </nav>
     </section>
     <section class="rightBar"></section>
-    
+
     <main>
-      <section class="page-header" id="chat-name">
-      </section>
-      <section class="page-content" id="messages-chat"
-      style="margin-bottom: 4vh;">
-      <div class="message">
-        <div class="message-image" id="message-image">
-          <img src="icons/account-online.svg">
-        </div>
-        <div class="message-content">
-          <div class="message-name">
-            <h3>
-              You
-            </h3>
-          </div>
-          <div class="message-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed lobortis libero. In rhoncus venenatis auctor.In rhoncus venenatis auctor.
-          </div>
-        </div>
-        <div class="message-age">
-          10 min
-        </div>
-      </div>
-      <div class="message">
-        <div class="message-image" id="message-image">
-          <img src="icons/account-online.svg">
-        </div>
-        <div class="message-content">
-          <div class="message-name">
-            <h3>
-              User Name
-            </h3>
-          </div>
-          <div class="message-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed lobortis libero. In rhoncus venenatis auctor.In rhoncus venenatis auctor.
-          </div>
-        </div>
-        <div class="message-age">
-          9 min
-        </div>
-      </div>
-      <div class="message">
-        <div class="message-image" id="message-image">
-          <img src="icons/account-online.svg">
-        </div>
-        <div class="message-content">
-          <div class="message-name">
-            <h3>
-              You
-            </h3>
-          </div>
-          <div class="message-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed lobortis libero. In rhoncus venenatis auctor.In rhoncus venenatis auctor.
-          </div>
-        </div>
-        <div class="message-age">
-          8 min
-        </div>
-      </div>
-    </section>
-      <section class="input-message">
-            <div class="searchbar1">
-                <div class="input-group mb-3 border">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Write your message here"
-                    aria-label="serach"
-                    aria-describedby="basic-addon2"
-                    id="input-message"
-                  />
-                  <div class="input-group-append">
-                    <button
-                      class="btn btn-outline-secondary btn-sm d-flex align-items-center border"
-                      type="button"
-                    >
-                      <img src="icons/clip.svg" style="height: 4vh" />
-                    </button>
-                    <button
-                      class="btn btn-outline-secondary btn-sm d-flex align-items-center border"
-                      type="button"
-                      id="button-send-message"
-                    >
-                      <img src="icons/send-blue.svg" style="height: 4vh" />
-                    </button>
-                  </div>
-                </div>
+      <section class="page-header" id="chat-name"></section>
+      <section
+        class="page-content"
+        id="messages-chat"
+        style="margin-bottom: 4vh"
+      >
+        <div class="message">
+          <div class="message-info">
+            <div class="message-sender">
+              <div class="message-image" id="message-image">
+                <img src="icons/account-online.svg" />
               </div>
-        </section>
+              <div class="message-name">
+                <h3>You</h3>
+              </div>
+            </div>
+            <div class="message-age">10 min</div>
+          </div>
+
+          <div class="message-content">
+            <div class="message-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed
+              lobortis libero. In rhoncus venenatis auctor.In rhoncus venenatis
+              auctor.
+            </div>
+          </div>
+        </div>
+        <div class="message">
+          <div class="message-info">
+            <div class="message-sender">
+              <div class="message-image" id="message-image">
+                <img src="icons/account-online.svg" />
+              </div>
+              <div class="message-name">
+                <h3>You</h3>
+              </div>
+            </div>
+            <div class="message-age">9 min</div>
+          </div>
+
+          <div class="message-content">
+            <div class="message-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed
+              lobortis libero. In rhoncus venenatis auctor.In rhoncus venenatis
+              auctor.
+            </div>
+          </div>
+        </div>
+        <div class="message">
+          <div class="message-info">
+            <div class="message-sender">
+              <div class="message-image" id="message-image">
+                <img src="icons/account-online.svg" />
+              </div>
+              <div class="message-name">
+                <h3>You</h3>
+              </div>
+            </div>
+            <div class="message-age">8 min</div>
+          </div>
+
+          <div class="message-content">
+            <div class="message-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed
+              lobortis libero. In rhoncus venenatis auctor.In rhoncus venenatis
+              auctor.
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="input-message">
+        <div class="system-output" id="system-output"></div>
+        <div class="searchbar1">
+          <div class="input-group mb-3 border">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Write your message here"
+              aria-label="serach"
+              aria-describedby="basic-addon2"
+              id="input-message"
+            />
+            <div class="input-group-append">
+              <button
+                class="btn btn-outline-secondary btn-sm d-flex align-items-center border"
+                type="button"
+                id="button-upload-file"
+                accept="image/png, image/jpeg"
+              >
+                <input id="file-input" type="file" accept="image/*" />
+                <img src="icons/clip.svg" style="height: 4vh" />
+              </button>
+              <button
+                class="btn btn-outline-secondary btn-sm d-flex align-items-center border"
+                type="button"
+                id="button-send-message"
+              >
+                <img src="icons/send-blue.svg" style="height: 4vh" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <script src="js/messageScript.js"></script>
   </body>
