@@ -226,6 +226,7 @@ main {
 .page-content {
   align-items: center;
   width: 95%;
+  margin-bottom: 5%;
 }
 
 @media (max-width: 600px) {
@@ -604,10 +605,11 @@ button[type="reset"] {
 .message-sender {
   display: flex;
   align-items: center;
+  width: 40%;
 }
 
 .message-image {
-  width: 100%;
+  width: 20%;
 }
 
 .message-image img {

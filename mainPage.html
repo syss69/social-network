@@ -96,21 +96,36 @@
       </section>
       <section class="page-content" id="page-content">
         <div class="new-post">
-          <input placeholder="Something new?" type="text" id="new-post-input"/>
+          <input
+            placeholder="Something new?"
+            type="text"
+            id="new-post-input"
+            autocomplete="off"
+          />
           <button
             class="btn btn-outline-secondary btn-sm d-flex align-items-center border"
-            type="button">
-              <img src="icons/clip.svg" style="height: 3vh" />
+            type="button"
+            id="add-file-to-post"
+          >
+            <input id="file-input" type="file" accept="image/*" />
+            <img src="icons/clip.svg" style="height: 3vh" />
           </button>
           <button
             class="btn btn-outline-secondary btn-sm d-flex align-items-center border"
             type="button"
-            id="create-post-button">
-              <img src="icons/send-blue.svg" style="height: 3vh" />
+            id="create-post-button"
+          >
+            <img src="icons/send-blue.svg" style="height: 3vh" />
           </button>
-        </div> 
-        <div class="page-posts" id="page-posts">
-          <!-- 
+        </div>
+        <div class="page-posts" id="page-posts"></div>
+      </section>
+    </main>
+    <script src="js/postScript.js"></script>
+    <script src="js/mainPage.js"></script>
+  </body>
+</html>
+<!-- 
           <div class="post">
             <div class="post-header">
               <div class="user-info">
@@ -138,9 +153,3 @@
             </div>
           </div>
           -->
-        </div> 
-      </section>
-    </main>
-    <script src="js/postScript.js"></script>
-  </body>
-</html>

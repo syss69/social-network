@@ -75,15 +75,17 @@ sendMessageButton.addEventListener("click", () => {
 
 const callSystemOutput = () => {
   const mediaSource = localStorage.getItem("storedImage");
+  const outputClasses = "alert alert-success";
   setTimeout(() => {
-    if (mediaSource !== "") {
+    if (mediaSource) {
       const systemOutput = document.getElementById("system-output");
-      systemOutput.innerHTML = `<div class="alert alert-primary" role="alert">
-  Image loaded
-</div>`;
+      systemOutput.classList.add(...outputClasses.split(" "));
+      systemOutput.role = "alert";
+      systemOutput.textContent = "Image Loaded";
       setTimeout(() => {
         systemOutput.innerHTML = "";
-      }, 5000);
+        systemOutput.classList.remove(...outputClasses.split(" "));
+      }, 1500);
     }
   });
 };

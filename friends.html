@@ -96,46 +96,37 @@
       </section>
       <section class="page-content">
         <div class="filter">
-          <img src="icons/sortBy.svg" />
+          <button
+            class="btn btn-outline-secondary btn-sm d-flex align-items-center borderdropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            id=""
+          >
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="#" id="sort-alphabet"
+                  >Sort by alphabet</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" id="sort-default"
+                  >Sort by popularity</a
+                >
+              </li>
+            </ul>
+            <img src="icons/sortBy.svg" />
+          </button>
           <img src="icons/add.svg" />
         </div>
-        <div class="list-element">
-          <div class="element-picture">
-            <img src="icons/account-offline.svg" />
-          </div>
-          <div class="element-name">
-            <h1>User Name</h1>
-          </div>
-          <div class="element-notif"></div>
-          <div class="element-options">
-            <img src="icons/options.svg" />
-          </div>
-        </div>
-        <div class="list-element">
-          <div class="element-picture">
-            <img src="icons/account-offline.svg" />
-          </div>
-          <div class="element-name">
-            <h1>User Name</h1>
-          </div>
-          <div class="element-notif"></div>
-          <div class="element-options">
-            <img src="icons/options.svg" />
-          </div>
-        </div>
-        <div class="list-element">
-          <div class="element-picture">
-            <img src="icons/account-offline.svg" />
-          </div>
-          <div class="element-name">
-            <h1>User Name</h1>
-          </div>
-          <div class="element-notif"></div>
-          <div class="element-options">
-            <img src="icons/options.svg" />
-          </div>
-        </div>
+        <div class="list" id="friends-list"></div>
       </section>
     </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/friends.js"></script>
   </body>
 </html>

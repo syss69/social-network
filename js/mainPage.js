@@ -1,12 +1,21 @@
-const createPostButton = document.getElementById("create-post-button");
-const newPostInput = document.getElementById("new-post-input");
-const pagePosts = document.getElementById("page-posts");
-const buttonUploadFile = document.getElementById("add-file-to-post");
-const inputFile = document.getElementById("file-input");
+let posts = [];
 
-localStorage.setItem("storedImage", "");
+fetch("https://jsonplaceholder.typicode.com/posts")
+  .then((response) => response.json())
+  .then((data) => {
+    posts = data.filter((data) => data.userId == 1);
+    console.log(posts);
+    posts.forEach((post) => {
+      loadPosts(post);
+    });
+  });
 
-const createPost = (content, media) => {
+const addPhotos = () => {
+  const photos = Math.floor(Math.random() * 3); //just for the example to add a random number of photos (0, 1, 2) because i don not found api for posts
+  return photos;
+};
+
+const loadPosts = (post) => {
   const postDiv = document.createElement("div");
   postDiv.classList.add("post");
   const postHeader = document.createElement("div");
@@ -22,7 +31,7 @@ const createPost = (content, media) => {
   userInfo.appendChild(userPhoto);
   userInfo.appendChild(userName);
   const postAge = document.createElement("h4");
-  postAge.textContent = "now"; // change later with api call
+  postAge.textContent = "1 hour ago"; // change later with api call
   postHeader.appendChild(postAge);
   const postContent = document.createElement("div");
   postContent.classList.add("post-content");
@@ -32,14 +41,17 @@ const createPost = (content, media) => {
   postContent.appendChild(postContentText);
   const postText = document.createElement("p");
   postContentText.appendChild(postText);
-  postText.textContent = content;
-  if (media !== "") {
-    const imageContainer = document.createElement("div");
-    imageContainer.classList.add("image-box");
-    postContent.appendChild(imageContainer);
-    const photo = document.createElement("img");
-    photo.src = media;
-    imageContainer.appendChild(photo);
+  postText.textContent = post.body;
+  const imageContainer = document.createElement("div");
+  imageContainer.classList.add("image-box");
+  postContent.appendChild(imageContainer);
+  const numPhoto = addPhotos(); // to change later with real api
+  if (numPhoto > 0) {
+    for (let i = 0; i < numPhoto; i++) {
+      const photo = document.createElement("img");
+      photo.src = "https://picsum.photos/400";
+      imageContainer.appendChild(photo);
+    }
   }
   const postFooter = document.createElement("div");
   postFooter.classList.add("post-footer");
@@ -63,33 +75,13 @@ const createPost = (content, media) => {
   sendButton.classList.add(...buttonClasses.split(" "));
   const sendIcon = document.createElement("img");
   sendIcon.src = "icons/send-gray.svg";
+  sendButton.addEventListener("click", () => {
+    window.location.href = "chats.html";
+  });
   sendButton.appendChild(sendIcon);
   postFooter.appendChild(likeButton);
   postFooter.appendChild(commentButton);
   postFooter.appendChild(sendButton);
   postDiv.appendChild(postFooter);
-  newPostInput.value = "";
-  pagePosts.prepend(postDiv);
+  pagePosts.appendChild(postDiv);
 };
-
-createPostButton.addEventListener("click", () => {
-  const newPostContent = newPostInput.value.trim();
-  const selectedFile = localStorage.getItem("storedImage");
-  if (newPostContent !== "" || selectedFile !== "") {
-    createPost(newPostContent, selectedFile);
-  }
-});
-
-buttonUploadFile.addEventListener("click", () => {
-  inputFile.click();
-});
-
-inputFile.addEventListener("change", () => {
-  const file = inputFile.files[0];
-  const reader = new FileReader();
-  reader.onload = (e) => {
-    const base64String = e.target.result;
-    localStorage.setItem("storedImage", base64String);
-  };
-  reader.readAsDataURL(file);
-});
