@@ -132,5 +132,6 @@ submitButton.addEventListener("click", async (event) => {
 });
 
 safetyIndicator.addEventListener("mouseover", () => {
-  alert("Your password must contain at least 8 symbols");
+  safetyIndicator.style =
+    "border-radius: 15px; background-color: bisque; width: 300px; height: 30px;";
 });
