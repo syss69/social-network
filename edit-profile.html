@@ -92,7 +92,7 @@
     <section class="rightBar"></section>
     <main>
       <section class="page-header">
-        <h2>My profile</h2>
+        <h2>Edit profile</h2>
       </section>
       <section class="page-content">
         <div class="profile">
@@ -108,9 +108,7 @@
               <img src="icons/external/youtube.svg" />
               <img src="icons/external/twitch.svg" />
             </div>
-            <div class="actions">
-              <img src="icons/edit.svg" />
-            </div>
+            <div class="actions"></div>
           </div>
           <div class="profile-info">
             <h1 id="your-name">User Name</h1>
@@ -120,72 +118,14 @@
             </p>
           </div>
           <div class="profile-menu">
-            <a href="friends.html"
-              ><div>
-                <img src="icons/friends.svg" />
-                <h3 class="label">Friends</h3>
-              </div></a
-            >
-            <a href="servers.html"
-              ><div>
-                <img src="icons/servers.svg" />
-                <h3 class="label">Servers</h3>
-              </div></a
-            >
-          </div>
         </div>
-        <div class="new-post">
-          <input
-            placeholder="Something new?"
-            type="text"
-            id="new-post-input"
-            autocomplete="off"
-          />
-          <button
-            class="btn btn-outline-secondary btn-sm d-flex align-items-center border"
-            type="button"
-            id="add-file-to-post"
-          >
-            <input id="file-input" type="file" accept="image/*" />
-            <img src="icons/clip.svg" style="height: 3vh" />
-          </button>
-          <button
-            class="btn btn-outline-secondary btn-sm d-flex align-items-center border"
-            type="button"
-            id="create-post-button"
-          >
-            <img src="icons/send-blue.svg" style="height: 3vh" />
-          </button>
-        </div>
-        <div class="page-posts" id="page-posts"></div>
-        <div class="post">
-          <div class="post-header">
-            <div class="user-info">
-              <img src="icons/account-online.svg" />
-              <h2>You</h2>
-            </div>
-            <h4>1h ago</h4>
-          </div>
-          <div class="post-content">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Vestibulum vestibulum vestibulum ipsum ac lacinia. Quisque
-              malesuada quam lectus, a finibus tortor semper non.
-            </p>
-            <div class="image-box">
-              <img src="https://picsum.photos/400" />
-              <img src="https://picsum.photos/400" />
+        <div class="buttons">
+            <div>
+              <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+              <button class="btn btn-secondary btn-lg" type="reset">Reset</button>
             </div>
           </div>
-          <div class="post-footer">
-            <img src="icons/heart-gray.svg" />
-            <img src="icons/comment.svg" />
-            <img src="icons/send-gray.svg" />
-          </div>
-        </div>
       </section>
     </main>
-    <script src="js/postScript.js"></script>
-    <script src="js/myProfile.js"></script>
   </body>
 </html>

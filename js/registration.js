@@ -5,6 +5,9 @@ const submitButton = document.getElementById("submit-button");
 const profileNameInput = document.getElementById("profilename-input");
 const emailInput = document.getElementById("email-input");
 
+const safetyIndicator = document.getElementById("safety-indicator");
+const equalIndicator = document.getElementById("same-indicator");
+
 const outputClassesDanger = "alert alert-danger";
 const outputClassesSucess = "alert alert-success";
 
@@ -81,10 +84,9 @@ const containsSpecialCharacters = (str) => {
 
 passwordInput.addEventListener("input", () => {
   let password = passwordInput.value.trim();
-  const indicator = document.getElementById("safety-indicator");
-  if (password.length > 8) {
+  if (password.length >= 8) {
     if (containsSpecialCharacters(password)) {
-      indicator.style =
+      safetyIndicator.style =
         "border-radius: 50%; background-color: lightgreen; width: 10px; height: 10px;";
     } else {
       indicator.style =
@@ -99,17 +101,17 @@ passwordInput.addEventListener("input", () => {
 repeatPassword.addEventListener("input", () => {
   let password = passwordInput.value.trim();
   let passwordRepeated = repeatPassword.value.trim();
-  const indicator = document.getElementById("same-indicator");
   if (passwordRepeated === password) {
-    indicator.style =
+    equalIndicator.style =
       "border-radius: 50%; background-color: lightgreen; width: 10px; height: 10px;";
   } else {
-    indicator.style =
+    equalIndicator.style =
       "border-radius: 50%; background-color: red; width: 10px; height: 10px;";
   }
 });
 
 submitButton.addEventListener("click", async (event) => {
+  event.preventDefault();
   const nickname = usernameInput.value.trim();
   const password = passwordInput.value.trim();
   const passwordRepeat = repeatPassword.value.trim();
@@ -126,5 +128,9 @@ submitButton.addEventListener("click", async (event) => {
     localStorage.setItem("hashedPassword", hashed);
     localStorage.setItem("yourName", profileName);
   }
-  event.preventDefault();
+  setTimeout((window.location.href = "connection-page.html"), 3000);
+});
+
+safetyIndicator.addEventListener("mouseover", () => {
+  alert("Your password must contain at least 8 symbols");
 });
