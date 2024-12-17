@@ -82,20 +82,25 @@ const containsSpecialCharacters = (str) => {
   return regex.test(str);
 };
 
-passwordInput.addEventListener("input", () => {
-  let password = passwordInput.value.trim();
+const checkPassword = (password) => {
   if (password.length >= 8) {
     if (containsSpecialCharacters(password)) {
-      safetyIndicator.style =
-        "border-radius: 50%; background-color: lightgreen; width: 10px; height: 10px;";
+      safetyIndicator.classList.add("strong-password");
+      return "strong"
     } else {
-      indicator.style =
-        "border-radius: 50%; background-color: yellow; width: 10px; height: 10px;";
+      safetyIndicator.classList.add("medium-password");
+      return "medium"
     }
   } else {
-    indicator.style =
-      "border-radius: 50%; background-color: red; width: 10px; height: 10px;";
+    safetyIndicator.classList.add("weak-password");
+    return "weak"
   }
+}
+
+passwordInput.addEventListener("input", () => {
+  let password = passwordInput.value.trim();
+  safetyIndicator.classList.remove("weak-password", "medium-password", "strong-password");
+  checkPassword(password);
 });
 
 repeatPassword.addEventListener("input", () => {
@@ -130,8 +135,41 @@ submitButton.addEventListener("click", async (event) => {
   }
   setTimeout((window.location.href = "connection-page.html"), 3000);
 });
-
-safetyIndicator.addEventListener("mouseover", () => {
-  safetyIndicator.style =
-    "border-radius: 15px; background-color: bisque; width: 300px; height: 30px;";
+/*
+safetyIndicator.addEventListener("mouseenter", () => {
+  let password = passwordInput.value.trim();
+  let status = checkPassword(password);
+  safetyIndicator.classList.remove("weak-password", "medium-password", "strong-password");
+  switch (status){
+    case "strong":
+      safetyIndicator.textContent = "Your password is strong";
+      safetyIndicator.classList.add("strong-password-extended");
+      break;
+    case "medium":
+      safetyIndicator.textContent = "Your password is medium";
+      safetyIndicator.classList.add("medium-password-extended");
+      break;
+    case "weak":
+      safetyIndicator.textContent = "Your password is weak";
+      safetyIndicator.classList.add("weak-password-extended");
+      break;
+  }
 });
+
+safetyIndicator.addEventListener("mouseleave", () => {
+  let password = passwordInput.value.trim();
+  let status = checkPassword(password);
+  safetyIndicator.textContent = "";
+  safetyIndicator.classList.remove("weak-password", "medium-password", "strong-password");
+  switch (status){
+    case "strong":
+      safetyIndicator.classList.add("strong-password");
+      break;
+    case "medium":
+      safetyIndicator.classList.add("medium-password");
+      break;
+    case "weak":
+      safetyIndicator.classList.add("weak-password");
+      break;
+  }
+}); */

@@ -658,3 +658,46 @@ button[type="reset"] {
     display: none;
   }
 }
+
+
+.weak-password{
+  border-radius: 50%;
+  background-color: red; 
+  width: 10px; 
+  height: 10px;
+}
+
+.medium-password{
+  border-radius: 50%; 
+  background-color: yellow; 
+  width: 10px; 
+  height: 10px;
+}
+
+.strong-password{
+  border-radius: 50%; 
+  background-color: lightgreen; 
+  width: 10px; 
+  height: 10px;
+}
+
+.weak-password-extended{
+  border-radius: 50%;
+  background-color: red; 
+  width: 10px; 
+  height: 10px;
+}
+
+.medium-password-extended{
+  border-radius: 50%; 
+  background-color: yellow; 
+  width: 10px; 
+  height: 10px;
+}
+
+.strong-password-extended{
+  border-radius: 50%; 
+  background-color: lightgreen; 
+  width: 10px; 
+  height: 10px;
+}
