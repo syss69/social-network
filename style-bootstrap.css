@@ -1711,10 +1711,11 @@ textarea.form-control.is-invalid {
 }
 
 .alert-danger {
-  --bs-alert-color: var(--bs-danger-text-emphasis);
-  --bs-alert-bg: var(--bs-danger-bg-subtle);
+  --bs-alert-color: #730000;
+  --bs-alert-bg: #ffb0b0;
   --bs-alert-border-color: var(--bs-danger-border-subtle);
   --bs-alert-link-color: var(--bs-danger-text-emphasis);
+  border-radius: 15px;
 }
 
 .alert-light {

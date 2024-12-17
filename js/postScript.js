@@ -18,7 +18,7 @@ const createPost = (content, media) => {
   const userPhoto = document.createElement("img");
   userPhoto.src = "icons/account-online.svg"; // change later with api call
   const userName = document.createElement("h2");
-  userName.textContent = "User / Group name"; // change later with api call
+  userName.textContent = "You"; // change later with api call
   userInfo.appendChild(userPhoto);
   userInfo.appendChild(userName);
   const postAge = document.createElement("h4");
